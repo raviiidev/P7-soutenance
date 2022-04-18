@@ -63,7 +63,7 @@
               fab
               title="J'aime"
               class="ma-3"
-              color="green"
+              color="green darken-4"
               @click="likePost(post.id, post.likes)"
             >
               <v-icon>mdi-thumb-up</v-icon>
@@ -80,36 +80,35 @@
             </v-btn>
           </v-card-text>
           <!--Modifier mon post-->
-          <button>
-            <v-dialog v-model="dialogUpPost" max-width="500px">
-              <v-card>
-                <v-card-title>Modifier mon post</v-card-title>
-                <v-card-text>
-                  <v-form ref="form" v-model="valid">
-                    <v-text-field
-                      v-model="dataPost.title"
-                      color="black"
-                      :rules="titleRules"
-                      :counter="50"
-                      label="Titre"
-                    ></v-text-field>
-                    <v-textarea
-                      v-model="dataPost.content"
-                      color="black"
-                      :rules="contentRules"
-                      label="Commentaire"
-                    ></v-textarea>
-                  </v-form>
-                </v-card-text>
-                <v-card-actions>
-                  <v-btn text @click="dialogUpPost = false">Annuler</v-btn>
-                  <v-btn text :disabled="!valid" @click="updatePost()">
-                    Valider
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-dialog>
-          </button>
+
+          <v-dialog v-model="dialogUpPost" max-width="500px">
+            <v-card>
+              <v-card-title>Modifier mon post</v-card-title>
+              <v-card-text>
+                <v-form ref="form" v-model="valid">
+                  <v-text-field
+                    v-model="dataPost.title"
+                    color="black"
+                    :rules="titleRules"
+                    :counter="50"
+                    label="Titre"
+                  ></v-text-field>
+                  <v-textarea
+                    v-model="dataPost.content"
+                    color="black"
+                    :rules="contentRules"
+                    label="Commentaire"
+                  ></v-textarea>
+                </v-form>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn text @click="dialogUpPost = false">Annuler</v-btn>
+                <v-btn text :disabled="!valid" @click="updatePost()">
+                  Valider
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
 
           <!--afficher les commentaires-->
           <div class="forum__comments" v-if="postId === post.id">
@@ -154,6 +153,7 @@
             </v-card>
             <!--Commenter le post-->
             <v-btn
+              aria-label="com"
               v-if="!afficheFrmCm"
               color="black white--text"
               title="commenter le post"
@@ -461,6 +461,7 @@ h1 {
 .imgPost {
   max-width: 300px;
 }
+
 .forum {
   &__comments {
     &--ind {

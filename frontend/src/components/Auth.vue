@@ -3,16 +3,18 @@
     <v-container class="auth">
       <div class="auth__boutons">
         <v-btn
+        aria-label="s'inscrire"
           class="auth__boutons--ind"
-          color="red white--text"
+          color="red darken-2 white--text"
           @click="component = 'signup'"
           rounded
         >
           S'inscrire
         </v-btn>
         <v-btn
+          aria-label="login"
           class="auth__boutons--ind"
-          color="red white--text white--hover"
+          color="red darken-2 white--text white--hover"
           @click="component = 'login'"
           rounded
         >

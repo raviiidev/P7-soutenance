@@ -38,7 +38,7 @@
 
         <v-list-item v-if="this.modo == 1">
           <v-list-item-icon>
-            <v-icon>mdi-security</v-icon>
+            <v-icon   aria-label="moderateur">mdi-security</v-icon>
           </v-list-item-icon>
           <v-list-item-content @click="moderation" class="lien">
             <v-list-item-title>Modération</v-list-item-title>
@@ -47,7 +47,7 @@
 
         <v-list-item>
           <v-list-item-icon>
-            <v-icon>mdi-logout-variant</v-icon>
+            <v-icon aria-label="se déconnecter">mdi-logout-variant</v-icon>
           </v-list-item-icon>
           <v-list-item-content @click="logout" class="lien">
             <v-list-item-title>Se déconnecter</v-list-item-title>
