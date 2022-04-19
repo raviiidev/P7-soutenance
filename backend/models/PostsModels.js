@@ -6,7 +6,7 @@ class PostsModels {
 
   getAllPosts() {
     let sql =
-    "SELECT posts.id, posts.userId, posts.title, posts.content, DATE_FORMAT(posts.date, '%d/%m/%Y à %H:%i:%s') AS date, posts.likes, posts.img, users.lastName, users.firstName FROM posts JOIN users ON posts.userId = users.id ORDER BY posts.date DESC";
+      "SELECT posts.id, posts.userId, posts.title, posts.content, DATE_FORMAT(posts.date, '%d/%m/%Y à %H:%i:%s') AS date, posts.likes, posts.img, users.lastName, users.firstName FROM posts JOIN users ON posts.userId = users.id ORDER BY posts.date DESC"
     return new Promise((resolve) => {
       connectdb.query(sql, function (err, result, fields) {
         if (err) throw err

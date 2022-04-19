@@ -15,9 +15,13 @@ exports.createPost = (req, res, next) => {
   const title = data.title
   const userId = data.userId
   const content = data.content
-  const imageUrl = `${req.protocol}://${req.get('host')}/images/${
-    req.file.filename
-  }`
+  let imageUrl = ''
+
+  if (req.file) {
+    imageUrl = `${req.protocol}://${req.get('host')}/images/${
+      req.file.filename
+    }`
+  }
   let sqlInserts = [userId, title, content, imageUrl]
   postsModels
     .createPost(sqlInserts)
