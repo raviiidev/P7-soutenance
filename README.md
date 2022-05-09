@@ -3,15 +3,12 @@
 
 Etudiante chez OpenClassrooms voici mon dernier projet qui permet de regrouper toutes les compétences acquises au sein de la formation.
 
-## Consigne
+## Compétences évaluées
 
-- Mise en page libre
-- Respect de la charte graphique
-- Utilisation d'un framework
-- Ecrire/ modifier/supprimer un commentaire
-- Ecrire/ modifier/ supprimer un profil
-- Designer un modérateur
-- Utiliser une base de données relationnelle
+- Authentifier un utilisateur et maintenir sa session
+- Gérer un stockage de données à l'aide de SQL
+- Implémenter un stockage de données sécurisé en utilisant SQL
+- Personnaliser le contenu envoyé à un client web
 
 ## Installation
 
