@@ -3,6 +3,15 @@
 
 Etudiante chez OpenClassrooms voici mon dernier projet qui permet de regrouper toutes les compétences acquises au sein de la formation.
 
+## Consigne
+
+- Mise en page libre
+- Respect de la charte graphique
+- Utilisation d'un framework
+- Ecrire/ modifier/supprimer un commentaire
+- Ecrire/ modifier/ supprimer un profil
+- Designer un modérateur
+- Utiliser une base de données relationnelle
 
 ## Installation
 
